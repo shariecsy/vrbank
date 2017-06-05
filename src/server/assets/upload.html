@@ -59,7 +59,7 @@
 		<div>选择一个文件上传:</div>
 		<form method="post" enctype="multipart/form-data"  id="form">
 			<ul>
-				<li><label><span>*</span>选择文件：</label><input type="file" size="50" id="uploadFile" name="name"/></li>
+				<li><label><span>*</span>选择文件：</label><input type="file" accept="application/zip" id="uploadFile" name="file"/></li>
 				<li><label><span>*</span>银行名称：</label><select name="identify">
 					<option value="">请选择</option>
 					<option value="grcbank">农商银行</option>
@@ -85,17 +85,24 @@
         $(function(){
 			$("#btn").click(function(){
                 var formData = new FormData($("#form")[0]);
-//				formData.append('image',$("#uploadFile")[0].files[0]);
-
 				var data = $("#form").serializeArray();
 				var file = $("#uploadFile").val();
-				data.push({name:'file',value:file});
+				data.push({name:'file',value:file})
 				console.log(data);//输出表单内容
+                var maxSize=1024*1024*100;//文件最大为100M
+//                var maxSize=1024*1024*1;//文件最大为100M
+				var fileSize=$("#uploadFile")[0].files[0].size;
+				console.log(fileSize);
 				for(var i = 0; i < data.length;i++) {
 					if (data[i].value == '' && data[i].name != 'description') {
 						alert('请完善表格内容');
 						return false;
 					}
+				}
+				if(fileSize>maxSize){
+					alert('文件大小不能超过100M，请重新选择');
+					$("#uploadFile").val('');
+					return false;
 				}
 				$.ajax({
 					type:"post",

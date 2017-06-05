@@ -13,11 +13,8 @@ exports.bus_ext = ['.do'];
 //上传文件存放路径
 exports.storage_path='/storage';
 //用户名和密码
-// exports.user_list=[{username:'admin',password:'123'}];
 exports.user_list=[
-    {username:'admin',password:'123'},
-    {username:'admin1',password:'1234'},
-    {username:'admin12',password:'12345'}
+    {username:'admin',password:'123'}
 ];
 //白名单不用登录
 exports.white_name_list=[

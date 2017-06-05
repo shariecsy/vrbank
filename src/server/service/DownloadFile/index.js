@@ -12,11 +12,11 @@ var DownloadFile=(function(){
             var distPath=__dirname+'/../..'+config.storage_path+folder;
 
             if(fs.existsSync(distPath)){
-                fs.readFile(distPath+"/index.json",function(err,data) {
+                fs.readFile(distPath+"/module.json",function(err,data) {
                     if (err) throw err;
                     var jsonObj = JSON.parse(data);
                     var hash = crypto.createHash('md5');
-                    var filename = "new_"+jsonObj.module.zipFileName;
+                    var filename = "new_"+jsonObj.zipFileName;
                     var rs = fs.createReadStream(distPath+"/"+filename);
                     var states = fs.statSync(distPath+'/'+filename);
 
@@ -38,11 +38,11 @@ var DownloadFile=(function(){
             var fs=require("fs");
             var filename;
 
-            fs.readFile(path+"/index.json",function(err,data) {
+            fs.readFile(path+"/module.json",function(err,data) {
                 if (err) throw err;
                 var jsonObj = JSON.parse(data);
 
-                filename=jsonObj.module.zipFileName;
+                filename=jsonObj.zipFileName;
                 if(fs.existsSync(path+"/new_"+filename)){
                     res.download(path+"/new_"+filename,filename,function(err){
                         if(!err){

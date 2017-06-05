@@ -38,7 +38,7 @@ var UploadFile=(function(){
     }
     var upload = function (params,req,res) {
 
-        console.log(req);  // 上传的文件信息
+        // console.log(req);  // 上传的文件信息
 
         var id = req.body.identify;
         var name = req.body.name;
@@ -48,7 +48,7 @@ var UploadFile=(function(){
         var upload_file_path = __dirname+'/../../'+config.storage_path+"/"+id+"/"+name+"/"+build;
         // console.log(upload_file_path);
         // console.log('POST上传的字段是：'+' '+req.body);
-        console.log(req.body);
+        // console.log(req.body);
         mkdir(upload_file_path);
         fs.readFile( req.files[0].path, function (err, data) {
             fs.writeFile(des_file, data, function (err) {
@@ -58,13 +58,11 @@ var UploadFile=(function(){
                     res.end();
                 }else{
                     var jsonStr = {
-                        "module":{
-                            "identify":id,
-                            "name":name,
-                            "build":build,
-                            "description":description,
-                            "zipFileName":req.files[0].originalname
-                        }
+                        "identify":id,
+                        "name":name,
+                        "build":build,
+                        "description":description,
+                        "zipFileName":req.files[0].originalname
                     };
                     var jsonData = JSON.stringify(jsonStr);
                     fs.writeFile(upload_file_path+ "/module.json",jsonData,function (err,data) {
@@ -83,7 +81,7 @@ var UploadFile=(function(){
                 res.end();
             });
         });
-    }
+    };
     return {
         upload:upload,
         checkLogin:checkLogin
