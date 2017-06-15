@@ -1,0 +1,22 @@
+{
+  "name": "httpserver",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/pm2/bin/pm2 start process.json",
+    "restart": "node node_modules/pm2/bin/pm2 restart process.json",
+    "stop": "node node_modules/pm2/bin/pm2 stop process.json",
+    "delete": "node node_modules/pm2/bin/pm2 delete process.json",
+    "build": ""
+  },
+  "dependencies": {
+    "archiver": "^1.3.0",
+    "body-parser": "^1.17.2",
+    "debug": "^2.6.8",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "path": "^0.12.7",
+    "pm2": "^2.4.6",
+    "serve-favicon": "^2.4.3"
+  }
+}

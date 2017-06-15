@@ -1,0 +1,74 @@
+.container{
+    position:relative;
+    width:1024px;
+    margin:0 auto;
+}
+.container h3{
+    padding:20px 0 10px;
+}
+.container li{
+    padding: 7px 0;
+}
+.container .btn-group {
+
+}
+.container label{
+    display: inline-block;
+    width:100px;
+    text-align: left;
+}
+.container textarea{
+    width:500px;
+    height: 100px;
+    padding:3px 5px;
+    vertical-align: top;
+    resize: none;
+}
+li span{
+    color: red;
+}
+.container .logout-btn{
+    position: absolute;
+    top:20px;
+    right:0;
+}
+.container .logout-btn a{
+    text-decoration: none;
+}
+.container .inputs{
+    width:150px;
+    height:20px;
+    border:1px solid #ddd;
+}
+.container .select{
+    display: inline-block;
+    width:150px;
+    border:1px solid #ddd;
+    background-color: #fff;
+}
+.container .select select{
+    width: 150px;
+    border:none;
+    background-color: transparent;
+}
+.container .btn-group input{
+    margin-right: 10px;
+}
+.container .upload-btn,
+.container .reset-btn,
+.container .download-btn{
+    padding:3px 5px;
+    border:1px solid #ddd;
+    border-radius:3px;
+    background-color: #fff;
+    font-size: 14px;
+    color:#333;
+}
+.container .download-btn{
+    text-decoration: none;
+    color:#ddd;
+}
+
+.container .active{
+    color:#333
+}

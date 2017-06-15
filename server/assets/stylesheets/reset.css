@@ -1,0 +1,40 @@
+html, body, div, span, table, tbody, tr, th, td, em, img, strong, h1, h2, h3, h4, h5, h6, p, a, dl, dd, dt, ol, ul, li, form, label, input, textarea, button, b, i, u {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none; }
+
+h1, h2, h3, h4, h5, h6, b {
+    font-weight: 400; }
+
+a, img {
+    text-decoration: none;
+    border: 0; }
+
+body {
+    font:14px/1.5 "Microsoft YaHei",Arial,"simsun";
+    color: #666;
+    background: #f5f5f5;
+    min-width: 1200px;
+    overflow-x: auto; }
+
+a {
+    color: #666;
+    font-size: 14px; }
+a:link {
+    text-decoration: none; }
+a:hover {
+    text-decoration: none;
+    color: #d09e4e; }
+a:active {
+    text-decoration: none;
+    color: #666; }
+.clearfix {
+    *zoom: 1; }
+.clearfix:after {
+    display: block;
+    content: '.';
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden; }

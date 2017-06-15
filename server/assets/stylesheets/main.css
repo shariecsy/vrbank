@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/*表单 start*/
+.form-group {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    clear: both;
+    *zoom: 1
+}
+
+.form-group:after {
+    display: block;
+    content: '.';
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden
+}
+
+.form-group label {
+    float: left;
+    display: block;
+    width: 110px;
+    text-align: right;
+    margin-right: 5px;
+    line-height: 40px;
+    z-index: 11
+}
+
+.form-group div.input-control {
+    line-height: 38px;
+}
+
+.form-group .input-control {
+    float: left;
+    background-color: #fff!important;
+    border: 1px solid #e2e2e2;
+    height: 38px;
+    line-height: 100%;
+    line-height: 38px \9;
+    padding: 0 10px;
+    width: 230px;
+    overflow: hidden;
+    color: #666;
+    font-size: 12px;
+    font-family: Arial, "Microsoft YaHei", "simsun";
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out 0s;
+    -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out 0s;
+    border-radius:2px;
+    -webkit-border-radius:2px;
+}
+
+.form-group .input-control.disabled {
+    background: #ddd
+}
+
+.form-group .input-control.error {
+    border-color: #54c3f1;
+    color: #333
+}
+
+.form-group .input-control.focus {
+    border-color: #c11920;
+    color: #333;
+    box-shadow: 2px 2px 5px #ebeaea;
+    -webkit-box-shadow: 2px 2px 5px #ebeaea
+}
+
+.form-group .input-control.code {
+    width: 120px
+}
+
+.form-group input.input-control:focus {
+    border-color: #c11920;
+    color: #333;
+    box-shadow: 2px 2px 5px #ebeaea;
+    -webkit-box-shadow: 2px 2px 5px #ebeaea
+}
+
+.form-group .placeholder {
+    color: #999;
+    font-size: 12px
+}
+
+.form-group.auto-height, .form-group label.auto-height, .form-group .input.auto-height {
+    height: auto;
+    line-height: normal
+}
+
+.form-group.margin-bottom {
+    margin-bottom: 0
+}
+
+.form-group .input {
+    position: relative;
+    float: left;
+    line-height: 40px
+}
+/*表单 end*/
+
+/*按钮 start*/
+.btn {
+    color: #fff;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    width: 100%;
+    border: 0;
+    text-align: center;
+    cursor: pointer;
+    font-family: Arial, "Microsoft YaHei", "simsun";
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block
+}
+
+.btn-confirm {
+    background: #333333;
+}
+.btn-confirm:hover {
+    background: #444444;
+    color: #fff
+}
+/*按钮 end*/
+
+.container{
+    width:1200px;
+    margin:0 auto;
+}
+/*用户登录*/
+.login{
+    position:relative;
+    margin-top: 50px;
+}
+.login-box{
+    z-index:100;
+    padding:20px 15px 30px 15px;
+    width: 296px;
+    height: 311px;
+    position: absolute;
+    top:140px;
+    right:180px;
+    background:rgba(255,255,255,0.7);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    box-shadow:0 0 10px rgba(197, 197, 197, .5);
+    -webkit-box-shadow:0 0 10px rgba(197, 197, 197, .5);
+}
+.login-box form{
+    padding-top: 50px;
+}
+.login-box .form-group{
+    margin-bottom:25px;
+}
+.login-box h3{
+    font-size:18px;
+    margin-top: 15px;
+    position:relative;
+    text-align: center;
+    /*border-bottom:1px solid #ea5518;*/
+}
+.login-box h3 span:before,.login-box h3 span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 82px;
+    border-bottom: 1px solid #666;
+}
+.login-box h3 span:before{
+    right:86px;
+    -webkit-transform: translate(100%,0);
+    transform: translate(100%,0);
+}
+
+.login-box h3 span:after{
+    left:-80px;
+    -webkit-transform: translate(100%,0);
+    transform: translate(100%,0);
+}
+
+.login-box i{
+    position: absolute;
+    top:9px;
+    left:5px;
+    display:block;
+    font-size:25px;
+    color:#999;
+    border-right:1px solid #ddd;
+    width: 35px;
+    height: 25px;
+    line-height:25px;
+}
+.login-box .input-control{
+    padding-left: 50px;
+    font-size:16px;
+}
+.login-box .btn-box{
+    padding-top:20px;
+}
+.background{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(../images/login-background.jpg) no-repeat 0 0;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+}
+.banner-1{
+    width: 800px;
+    height: 188px;
+    font: 10rem '华文行楷';
+    position: absolute;
+    top:110px;
+    left:0;
+}
+.banner-1 .item{
+    float:left;
+    margin: 0.5rem;
+    position: relative;
+}
+.banner-1 .caption {
+    color: #99282f;
+    position: relative;
+    z-index:1;
+}
+
+.item .top, .item .bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.item .top {
+    color: #fff;
+    z-index: 3;
+    transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+    -webkit-transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+}
+
+.item .bottom {
+    color: rgba(0,0,0,0.2);
+    transform: scale(1.1, 1) rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+    -webkit-transform: scale(1.1, 1) rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+    z-index: 2;
+}
+
+.item:hover .top {
+    color: #fafafa;
+    transform: scale(1.1, 1) rotateX(0deg) rotateY(-40deg) rotateZ(0deg) skew(0deg, 1deg);
+    -webkit-transform: scale(1.1, 1) rotateX(0deg) rotateY(-40deg) rotateZ(0deg) skew(0deg, 1deg);
+}
+
+.item:hover .bottom {
+    transform:scale(1.1, 1) rotateX(0deg) rotateY(-40deg) rotateZ(0deg) skew(0deg, 20deg);
+    -webkit-transform:scale(1.1, 1) rotateX(0deg) rotateY(-40deg) rotateZ(0deg) skew(0deg, 20deg);
+}
+.banner-2{
+    position: absolute;
+    left:0;
+    top:332px;
+    z-index: 100;
+    font: 3.5rem '楷体';
+    color: #fff;
+}
+.banner-2 p{
+    padding-top:15px;
+}
+.header{
+    position:relative;
+    z-index: 100;
+    padding-left: 20px;
+}
+.header span{
+    display:inline-block;
+    font-size: 30px;
+}
+.header span.logo{
+    width: 306px;
+    height: 93px;
+    background:url(../images/sword.png) no-repeat 0 0;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    vertical-align: middle;
+    position:relative;
+    top:12px;
+}
+.header span.logo-caption{
+    color: #fff;
+    margin-left: 20px;
+}
+.header span.title{
+    color: #333333;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 1px solid #b2b2b2;
+}

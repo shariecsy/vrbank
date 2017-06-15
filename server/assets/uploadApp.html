@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>上传操作</title>
+    <link type="text/css" rel="stylesheet" href="stylesheets/reset.css">
+    <link type="text/css" rel="stylesheet" href="stylesheets/upload.css"/>
+</head>
+<body>
+<div class="container">
+    <h3>App文件上传：</h3>
+    <div class="logout-btn"><a href="javascript:void(0);">退出</a></div>
+    <div>选择一个文件上传:</div>
+    <form method="post" enctype="multipart/form-data"  id="form">
+        <ul>
+            <li>
+                <label><span>*</span>选择文件：</label>
+                <input type="file" id="uploadFile" name="file"/>
+            </li>
+            <li>
+                <label><span>*</span>银行名称：</label>
+                <span class="select">
+                    <span>
+                        <select name="identify">
+                                <option value="">请选择</option>
+                        <option value="grcbank">农商银行</option>
+                        </select>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <label><span>*</span>平台类型：</label>
+                <span class="select">
+                    <span>
+                        <select name="name">
+                            <option value="">请选择</option>
+                            <option value="grcbank">grcbank</option>
+                        </select>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <label><span>*</span>版本号：</label>
+                <input type="number" name="build" class="inputs"/>
+            </li>
+            <li>
+                <label><span>*</span>更新类型：</label>
+                <span class="select">
+                    <span>
+                        <select name="isFull">
+                            <option value="">请选择</option>
+                            <option value="1">全部更新</option>
+                            <option value="0">部分更新</option>
+                        </select>
+                    </span>
+                </span>
+            </li>
+            <li>
+                <label>描述：</label>
+                <textarea name="description" ></textarea>
+            </li>
+            <li class="btn-group">
+                <label></label>
+                <input type="button" value="上传文件" id="btn" class="upload-btn"/>
+                <input type="reset" value="清空数据" id="btn-reset" class="reset-btn"/>
+            </li>
+        </ul>
+        <input type="hidden" name="filetype" value="app"/>
+    </form>
+</div>
+<script type="text/javascript" src="libs/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/uploadApp.js"></script>
+</body>
+</html>

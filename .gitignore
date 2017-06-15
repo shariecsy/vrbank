@@ -1,0 +1,4 @@
+# Created by .ignore support plugin (hsz.mobi)
+src/server/node_modules
+src/server/shell
+src/client
